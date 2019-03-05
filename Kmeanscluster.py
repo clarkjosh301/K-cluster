@@ -1,3 +1,4 @@
+#dataset is from https://www.kaggle.com/abineshkumark/carsdata/version/1
 import pandas as pd
 from sklearn.cluster import KMeans
 import numpy as np
@@ -29,4 +30,3 @@ f, (ax1) = plt.subplots(1, sharey=True, figsize=(12,6))
 ax1.set_title('K Means')
 ax1.scatter(cars_df[' weightlbs'],cars_df[' cubicinches'],cars_df['mpg'],c=cars_df['prediction'],cmap='rainbow')
 plt.show()
-
