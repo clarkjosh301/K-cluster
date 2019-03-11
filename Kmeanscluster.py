@@ -22,7 +22,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 corr = cars_df[cars_df.columns].corr()
 sns.heatmap(corr, cmap='YlGnBu', annot = True)
-#drop variables with <50% correlation
 X = cars_df.drop([' brand', ' cylinders', ' year', ' hp', ' time-to-60'], axis=1)
 KMmodel = kmc.fit(X)
 cars_df['prediction']=KMmodel.labels_
